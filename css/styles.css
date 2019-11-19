@@ -54,8 +54,11 @@ header {
   padding-right: 0;
   font-size: 18px; }
 
-.nav-link:hover, .nav-item.active {
+.nav-link:hover {
   color: #4DCDC4; }
+
+.nav-item.active {
+  color: #FF6B6A; }
 
 .navbar-nav a {
   letter-spacing: 0.2rem; }
@@ -278,10 +281,10 @@ select:-webkit-autofill:focus {
 
 .link {
   font-weight: 300;
-  color: #4DCDC4; }
+  color: #FF6B6A; }
   .link:hover {
     font-weight: 400;
-    color: #4DCDC4;
+    color: #FF6B6A;
     text-decoration: none; }
 
 .btn {
@@ -303,7 +306,10 @@ select:-webkit-autofill:focus {
   left: 44%;
   top: -74px; }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1024px) {
+  .container {
+    max-width: 600px; }
+
   header {
     height: auto;
     display: inline; }
@@ -312,7 +318,7 @@ select:-webkit-autofill:focus {
     font-size: 2.8rem; }
 
   h2 {
-    font-size: 2rem;
+    font-size: 1.9rem;
     line-height: 3rem; }
 
   .title-img {
@@ -326,12 +332,33 @@ select:-webkit-autofill:focus {
   .title-content.home {
     margin: 4rem 0 6rem; }
     .title-content.home h1 {
-      font-size: 3.8rem;
+      font-size: 3.2rem;
       padding: 3rem 0; }
     .title-content.home .row {
       margin: -30px; }
   .title-content h1 {
     width: auto; }
+
+  .project-slide .tatau-img {
+    width: auto;
+    height: 600px;
+    margin: auto; }
+  .project-slide .waitui-img {
+    width: auto;
+    height: 550px;
+    padding-top: 2rem;
+    margin: auto;
+    filter: grayscale(1); }
+  .project-slide .spot-img {
+    width: auto;
+    height: 500px;
+    padding-top: 5rem;
+    margin: auto;
+    filter: grayscale(1); }
+  .project-slide .carousel-inner {
+    height: 600px;
+    min-height: auto;
+    max-height: none; }
 
   .project-info, .aboutus {
     width: auto; }
@@ -383,9 +410,6 @@ select:-webkit-autofill:focus {
 
   .contact-form {
     bottom: 0; } }
-@media (max-width: 500px) {
-  body {
-    background: blue; } }
 @media (min-width: 1200px) {
   .container {
     max-width: 1300px; } }
