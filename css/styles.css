@@ -59,6 +59,11 @@ header {
 
 .nav-item.active {
   color: #FF6B6A; }
+  .nav-item.active .nav-link:hover {
+    color: #FF6B6A; }
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 107, 106, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"); }
 
 .navbar-nav a {
   letter-spacing: 0.2rem; }
@@ -77,7 +82,7 @@ header {
     width: 45rem; }
 
 .t-project {
-  min-height: 28rem; }
+  min-height: 29rem; }
 
 .title-img {
   position: absolute;
@@ -410,7 +415,7 @@ select:-webkit-autofill:focus {
 
   .contact-form {
     bottom: 0; } }
-@media (min-width: 1200px) {
+@media (min-width: 1400px) {
   .container {
     max-width: 1300px; } }
 @media (min-width: 1600px) {

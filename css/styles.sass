@@ -59,10 +59,18 @@ header
   padding-left: 2rem
   padding-right: 0
   font-size: 18px
-.nav-link:hover,
+.nav-link:hover
   color: $color2
 .nav-item.active
   color: $color1
+  .nav-link:hover
+    color: $color1
+
+.navbar-toggler-icon
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 107, 106, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E")
+
+
+
 
 .navbar-nav
   a
@@ -85,7 +93,7 @@ header
   h1
     width: 45rem
 .t-project
-  min-height: 28rem
+  min-height: 29rem
 .title-img
   position: absolute
   width: 139%
@@ -457,7 +465,7 @@ select:-webkit-autofill:focus
 
 
 
-@media (min-width: 1200px)
+@media (min-width: 1400px)
   .container
     max-width: 1300px
 
