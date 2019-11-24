@@ -1,3 +1,11 @@
+@font-face
+  font-family: 'Futura PT Light'
+  src: url('FuturaPT-Light.eot')
+  src: url('FuturaPT-Light.eot?#iefix') format('embedded-opentype'), url('FuturaPT-Light.woff') format('woff'), url('FuturaPT-Light.ttf') format('truetype')
+  font-weight: normal
+  font-style: normal
+
+
 $color0: #FFFFFF
 $color1: #FF6B6A
 $color2: #4DCDC4
@@ -12,8 +20,8 @@ h
 h1
   font-size: 3.8rem
 h2
-  font-size: 2.6rem
-  line-height: 3.5rem
+  font-size: 2.8rem
+  line-height: 3.7rem
 
 h4
   font-weight: 300
@@ -29,7 +37,7 @@ p
   font-weight: 300
 
 body
-  font-family: 'Montserrat', sans-serif
+  font-family: 'Futura PT Light'
   color: $color4
   overflow-x: hidden
   &::-webkit-scrollbar
@@ -47,9 +55,17 @@ footer
   line-height: 1.8rem
   font-weight: 400
 
-header
+header, section
   height: 100vh
-  min-height: 40rem
+  min-height: 798px
+
+
+.navbar-brand
+  // -webkit-animation: fadein 2s /* Safari, Chrome and Opera > 12.1 */
+  // -moz-animation: fadein 2s /* Firefox < 16 */
+  // -ms-animation: fadein 2s /* Internet Explorer */
+  // -o-animation: fadein 2s /* Opera < 12.1 */
+  // animation: fadein 2s
 
 .navbar
   padding: 3rem 0
@@ -59,6 +75,19 @@ header
   padding-left: 2rem
   padding-right: 0
   font-size: 18px
+  animation-duration: 1s
+  animation-delay: .5s
+  &:nth-of-type(2)
+    animation-delay: .75s
+  &:nth-of-type(3)
+    animation-delay: 1s
+  &:nth-of-type(4)
+    animation-delay: 1.25s
+  // -webkit-animation: fadein 2s /* Safari, Chrome and Opera > 12.1 */
+  // -moz-animation: fadein 2s /* Firefox < 16 */
+  // -ms-animation: fadein 2s /* Internet Explorer */
+  // -o-animation: fadein 2s /* Opera < 12.1 */
+  // animation: fadein 2s
 .nav-link:hover
   color: $color2
 .nav-item.active
@@ -68,9 +97,6 @@ header
 
 .navbar-toggler-icon
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 107, 106, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E")
-
-
-
 
 .navbar-nav
   a
@@ -83,15 +109,22 @@ header
 
 .title-content
   margin: 6% 0 2rem
+  -webkit-animation: fadein 2s /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 2s /* Firefox < 16 */
+  -ms-animation: fadein 2s /* Internet Explorer */
+  -o-animation: fadein 2s /* Opera < 12.1 */
+  animation: fadein 2s
   &.home
     margin: 0
     height: 82%
-    // h1
-    //   padding-top: 3rem
+    h1
+      font-size: 4.5rem
+      width: 51rem
   .col-8
     margin: auto 0
   h1
     width: 45rem
+
 .t-project
   min-height: 29rem
 .title-img
@@ -109,17 +142,17 @@ header
 .project-slide
   background-color: $color2
   position: relative
+  display: grid
+  align-content: center
   .tatau-img
-    width: 988px
+    height: 700px
     margin: auto
   .waitui-img
-    width: 608px
-    padding-top: 2rem
+    height: 700px
     margin: auto
     filter: grayscale(1)
   .spot-img
-    width: 836px
-    padding-top: 2rem
+    height: 700px
     margin: auto
     filter: grayscale(1)
 
@@ -128,9 +161,19 @@ header
     max-height: 800px
     min-height: 640.3px
 
+#projects
+  -webkit-animation: fadein 2s /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 2s /* Firefox < 16 */
+  -ms-animation: fadein 2s /* Internet Explorer */
+  -o-animation: fadein 2s /* Opera < 12.1 */
+  animation: fadein 2s
+
+.project-section, .aboutus-section
+  display: grid
+  align-content: center
+
 .project-info, .aboutus
-  padding: 10rem 0
-  width: 806px
+  width: 838px
 
 .project-info
   margin-left: auto
@@ -176,11 +219,16 @@ header
   display: block
   height: auto
 
+#projects
+  .col-lg-4, .col-md-6
+    padding-left: 0
+    padding-right: 0
+
 .project-box
   position: relative
   display: block
-  margin-bottom: 2rem
-  margin-top: 2rem
+  // margin-bottom: 2rem
+  // margin-top: 2rem
   &.ml
     margin-left: 1rem
   &.mr
@@ -252,8 +300,6 @@ header
       padding-bottom: .5rem
 
 .contact-form
-  position: relative
-  bottom: 2rem
   form
     .btn
       margin-top: 0
@@ -265,7 +311,7 @@ header
   input, textarea
     margin-bottom: 1rem
     padding: .5rem 1.5rem
-    border: 3px solid $color2
+    border: 2px solid $color2
     color: $color2
     width: 100%
     &::placeholder
@@ -323,41 +369,51 @@ select:-webkit-autofill:focus
   left: 44%
   top: -74px
 
+@keyframes fadein
+    from
+      opacity: 0
+    to
+      opacity: 1
 
 
-// @media (max-width: 992px)
-//
-//   h2
-//     font-size: 2.4rem
-//
-//   .title-img
-//     transform: scale(0.6)
-//     left: 41px
-//
-//
-//   .project-info, .aboutus
-//     width: auto
-//
-//
-//   .mult-lines-green, .lines-white
-//     width: 100px
-//
-//   .mult-lines-green
-//     z-index: -1
-//
-//   .project-slide
-//     img
-//       width: 500px
+/* Firefox < 16 */
+@-moz-keyframes fadein
+    from
+      opacity: 0
+    to
+      opacity: 1
+
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein
+    from
+      opacity: 0
+    to
+      opacity: 1
+
+
+/* Internet Explorer */
+@-ms-keyframes fadein
+    from
+      opacity: 0
+    to
+      opacity: 1
+
+
+/* Opera < 12.1 */
+@-o-keyframes fadein
+    from
+      opacity: 0
+    to
+      opacity: 1
 
 @media screen and (max-width: 1024px)
 
-  .container
-    max-width: 600px
 
-  header
-    height: auto
-    display: inline
-
+  // header
+  //   height: auto
+  //   display: inline
+  //
   h1
     font-size: 2.8rem
   h2
@@ -365,9 +421,10 @@ select:-webkit-autofill:focus
     line-height: 3rem
   .title-img
     display: none
-
+  .navbar
+    .container
+      margin-top: 2rem
   .navbar-brand
-    margin-top: 2rem
     img
       height: 32px
 
@@ -413,8 +470,8 @@ select:-webkit-autofill:focus
       margin-right: -30px
       margin-left: -30px
   .project-box
-    margin-bottom: 2rem
-    margin-top: 0
+    // margin-bottom: 2rem
+    // margin-top: 0
     &.ml
       margin-left: 0
     &.mr
@@ -426,8 +483,8 @@ select:-webkit-autofill:focus
   .mult-lines-green, .lines-white
     width: 75px
 
-  .scroll-icon
-    display: none
+  // .scroll-icon
+  //   display: none
 
   .t-project
     min-height: 33rem
@@ -457,43 +514,71 @@ select:-webkit-autofill:focus
   .contact-form
     bottom: 0
 
-  // .col-md-6
-  //   position: relative!important
-  //   width: 100%
-  //   padding-right: 15px
-  //   padding-left: 15px
 
 
-
-@media (min-width: 1400px)
-  .container
-    max-width: 1300px
-
-@media (min-width:1600px)
+// @media screen and (min-width: 1400px)
+//   .container
+//     max-width: 1300px
+//
+@media screen and (min-width:1600px)
 
   .title-content
     h1
-      width: 48rem
-      font-size: 4rem
+      width: 60rem
+      font-size: 5rem
   .title-img
     width: 139%
     right: -202px
-    bottom: -165px
+    bottom: -145px
 
   .project-slide
-    .tatau-img
-      width: 1237px
-    .waitui-img
-      width: 762px
-    .spot-img
-      width: 1147px
+    .tatau-img, .waitui-img, .spot-img
+      height: 760px
+//
+//   .project-slide .carousel-inner
+//     min-height: 800px
+//     max-height: inherit
+//
+//   .t-project
+//     min-height: 37rem
+
+
+// ------------------------------------BOOTSTRAP CONTAINER MODIFICATIONS----------------------------------
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 576px)
   .container
-    max-width: 1500px
+    max-width: 540px
 
-  .project-slide .carousel-inner
-    min-height: 800px
-    max-height: inherit
+@media (min-width: 768px)
+  .container
+    max-width: 720px
 
-// @media (min-width: 768px)
-//   .container
-//       max-width: 600px
+@media (max-width: 760px)
+  .lines-paranaque
+    display: none
+
+@media (min-width: 992px)
+  .container
+    max-width: 874px
+
+@media (min-width: 1200px)
+  .container
+    max-width: 1055px
+
+@media screen and (min-width: 1400px)
+  .container
+    max-width: 1240px
+
+@media screen and (min-width: 1600px)
+  .container
+    max-width: 1440px

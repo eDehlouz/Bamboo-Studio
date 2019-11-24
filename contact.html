@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bamboo Studio</title>
 
     <!-- BOOTSTRAP CDN -->
@@ -52,7 +52,7 @@
       </div>
       <div class="col-lg-6">
         <div class="contact-form">
-          <form action="php/contact.php" method="post">
+          <form action="POST" data-netlify="true">
             <input type="text" name="name" placeholder="Name" required>
             <input type="mail" name="email" placeholder="Email Address" required>
             <input type="text" name="subject" placeholder="Subject" required>
@@ -60,7 +60,6 @@
             <button type="submit" class="btn" name="submit">SEND</button>
           </form>
         </div>
-
       </div>
     </div>
   </div>
