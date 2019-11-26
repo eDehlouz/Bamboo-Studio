@@ -10,12 +10,18 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <!-- CUSTOM STYLESHEET -->
     <link rel="stylesheet" href="css/styles.css">
+    <!-- ANIMATE.CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" integrity="sha256-PHcOkPmOshsMBC+vtJdVr5Mwb7r0LkSVJPlPrp/IMpU=" crossorigin="anonymous" />
     <!-- FONT AWESOME -->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500|Muli:300,400,500&display=swap" rel="stylesheet">
   </head>
   <body>
 
-    <nav class=" navbar navbar-expand-lg ">
+    <div class="loader ">
+      <img src="img/branding/graphic-2.png" class="animated infinite flipInY slow"alt="Loading...">
+    </div>
+
+    <nav class=" navbar navbar-expand-xl ">
       <div class="container">
       <a class="navbar-brand" href="#">
         <img src="img/branding/logo-blue.png" height="30" alt="">
@@ -24,7 +30,7 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav ml-auto ">
+    <ul class="navbar-nav ml-auto navbar-alt-animation studio">
       <li class="nav-item ">
         <a class="nav-link" href="index.html">home</a>
       </li>
@@ -42,13 +48,14 @@
   </div>
 </nav>
 
+<header class="animated fadeIn slower">
 <div class="title-content studio">
   <img src="img/branding/line-blue-crop.png" class="lines-paranaque"alt="">
   <div class=" container">
     <div class="row studio-info">
       <div class="col-lg-6 ">
-        <h1 class="paranaque-title"><b>what we do</b></h1>
-        <h3 class="paragraph-text about-intro">we at bamboo are a team of like minded individuals who are dedicated to producing creative work at the highest quality</h3>
+        <h1 class="portfolio-title"><b>what we do</b></h1>
+        <h3 class="font-light about-intro">we at bamboo are a team of like minded individuals who are dedicated to producing creative work at the highest quality</h3>
       </div>
       <div class="col-lg-6">
         <div class="row about-list">
@@ -98,6 +105,7 @@
     </div>
   </div>
   </div>
+</header>
 
 
 
@@ -107,6 +115,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <!-- Bootstrap core JavaScript -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
+
+    <script src="js/index.js" charset="utf-8"></script>
   </body>
 
 </html>

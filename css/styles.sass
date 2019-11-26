@@ -1,9 +1,3 @@
-@font-face
-  font-family: 'Futura PT Light'
-  src: url('FuturaPT-Light.eot')
-  src: url('FuturaPT-Light.eot?#iefix') format('embedded-opentype'), url('FuturaPT-Light.woff') format('woff'), url('FuturaPT-Light.ttf') format('truetype')
-  font-weight: normal
-  font-style: normal
 
 
 $color0: #FFFFFF
@@ -13,17 +7,17 @@ $color3: #C5F465
 $color4: #55626F
 $color5: #A9A9A9
 
-h
-  color: $color1
-  font-weight: 500
+
 
 h1
   font-size: 3.8rem
+  font-family: 'Montserrat', sans-serif
 h2
   font-size: 2.8rem
   line-height: 3.7rem
 
 h4
+  font-family: 'Montserrat', sans-serif
   font-weight: 300
 
 b
@@ -36,16 +30,29 @@ a
 p
   font-weight: 300
 
+h
+  color: $color1
+  font-weight: 500
+
+.font-light
+  font-weight: 200
+
+html,body
+  scroll-snap-type: y proximity
+
 body
-  font-family: 'Futura PT Light'
+  font-family: 'Muli', sans-serif
   color: $color4
+  background-color: white
   overflow-x: hidden
+
   &::-webkit-scrollbar
       width: 1em
   &::-webkit-scrollbar-track
       -webkit-box-shadow: inset 0 0 3px $color5
   &::-webkit-scrollbar-thumb
     background-color: $color2
+
 
 
 footer
@@ -58,17 +65,39 @@ footer
 header, section
   height: 100vh
   min-height: 798px
+section
+  scroll-snap-align: center
 
+.hideme
+  opacity: 0
+
+.loader
+  position: fixed
+  z-index: 99
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background-color: white
+  display: flex
+  justify-content: center
+  align-items: center
+  img
+    width: 100px
+  &.hidden
+    animation: fadeOut 1s
+    animation-delay: 2s
+    animation-fill-mode: forwards
+    display: none
 
 .navbar-brand
-  // -webkit-animation: fadein 2s /* Safari, Chrome and Opera > 12.1 */
-  // -moz-animation: fadein 2s /* Firefox < 16 */
-  // -ms-animation: fadein 2s /* Internet Explorer */
-  // -o-animation: fadein 2s /* Opera < 12.1 */
-  // animation: fadein 2s
-
+  animation-duration: 3s
+  img
+    height: 30px
 .navbar
+  font-family: 'Montserrat', sans-serif
   padding: 3rem 0
+
 .nav-item
   color: $color4
   font-weight: 500
@@ -76,24 +105,48 @@ header, section
   padding-right: 0
   font-size: 18px
   animation-duration: 1s
-  animation-delay: .5s
+  animation-delay: 1.75s
   &:nth-of-type(2)
-    animation-delay: .75s
+    animation-delay: 2s
   &:nth-of-type(3)
-    animation-delay: 1s
+    animation-delay: 2.25s
   &:nth-of-type(4)
-    animation-delay: 1.25s
-  // -webkit-animation: fadein 2s /* Safari, Chrome and Opera > 12.1 */
-  // -moz-animation: fadein 2s /* Firefox < 16 */
-  // -ms-animation: fadein 2s /* Internet Explorer */
-  // -o-animation: fadein 2s /* Opera < 12.1 */
-  // animation: fadein 2s
+    animation-delay: 2.5s
 .nav-link:hover
   color: $color2
 .nav-item.active
   color: $color1
   .nav-link:hover
     color: $color1
+
+.navbar-alt-animation
+  .nav-item
+    animation-delay: .75s
+    &:nth-of-type(2)
+      animation-delay: .5s
+    &:nth-of-type(3)
+      animation-delay: 1s
+    &:nth-of-type(4)
+      animation-delay: 1.25s
+  &.studio
+    .nav-item
+      animation-delay: 1.25s
+      &:nth-of-type(2)
+        animation-delay: 1s
+      &:nth-of-type(3)
+        animation-delay: .5s
+      &:nth-of-type(4)
+        animation-delay: .75s
+  &.contact
+    .nav-item
+      animation-delay: 1.25s
+      &:nth-of-type(2)
+        animation-delay: 1s
+      &:nth-of-type(3)
+        animation-delay: .75s
+      &:nth-of-type(4)
+        animation-delay: .5s
+
 
 .navbar-toggler-icon
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 107, 106, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E")
@@ -102,137 +155,142 @@ header, section
   a
     letter-spacing: 0.2rem
 
-.navbar-brand
-  img
-    height: 30px
-
-
 .title-content
   margin: 6% 0 2rem
-  -webkit-animation: fadein 2s /* Safari, Chrome and Opera > 12.1 */
-  -moz-animation: fadein 2s /* Firefox < 16 */
-  -ms-animation: fadein 2s /* Internet Explorer */
-  -o-animation: fadein 2s /* Opera < 12.1 */
-  animation: fadein 2s
-  &.home
+  &.home, &.project-page
     margin: 0
     height: 82%
     h1
       font-size: 4.5rem
       width: 51rem
-  .col-8
-    margin: auto 0
   h1
     width: 45rem
 
-.t-project
-  min-height: 29rem
-.title-img
-  position: absolute
-  width: 139%
-  right: -112px
-  bottom: -115px
-  z-index: -1
 .title-placement
   display: flex
   flex-direction: column
   justify-content: center
   height: 100%
 
-.project-slide
+.section-project
   background-color: $color2
+
+.section-aboutUs
+  background-color: white
+  h2
+    color: $color4
+  b
+    color: $color1
+
+.section-learnMore
+  background-color: $color1
+  h1
+    color: white
+    width: 48rem
+  .btn
+    color: white
+    font-size: 1.1rem
+    border: 1.5px solid
+    padding: .5rem 4.5rem
+    margin-top: 2rem
+
+.section-project, .section-aboutUs, .section-learnMore
+  display: grid
+  align-content: center
   position: relative
-  display: grid
-  align-content: center
-  .tatau-img
-    height: 700px
-    margin: auto
-  .waitui-img
-    height: 700px
-    margin: auto
-    filter: grayscale(1)
-  .spot-img
-    height: 700px
-    margin: auto
-    filter: grayscale(1)
 
-
-  .carousel-inner
-    max-height: 800px
-    min-height: 640.3px
-
-#projects
-  -webkit-animation: fadein 2s /* Safari, Chrome and Opera > 12.1 */
-  -moz-animation: fadein 2s /* Firefox < 16 */
-  -ms-animation: fadein 2s /* Internet Explorer */
-  -o-animation: fadein 2s /* Opera < 12.1 */
-  animation: fadein 2s
-
-.project-section, .aboutus-section
-  display: grid
-  align-content: center
-
-.project-info, .aboutus
-  width: 838px
-
-.project-info
+.home-project
   margin-left: auto
+  img
+    position: absolute
+    z-index: 3
+  // .circle-grey
+  //   bottom: 205px
+  //   left: 38px
+  // .circle-red
+  //   bottom: -46px
+  //   left: 61px
+  //   width: 18%
+  //   // 278px
+  // .circle-green
+  //   bottom: -115px
+  //   left: 213px
+  // .magazine
+  //   left: 0
+  //   bottom: -41px
+  //   width: 871px
+  .test-magazine
+    margin-top: auto
+    margin-bottom: auto
+    top: 192px
+    bottom: 0
+    left: 0
+    width: 849px
+  h2
+    color: white
+  b
+    color: #c5f465
   .btn
-    color: $color3
-    &:hover
-      background: $color3
-      color: white
+    border: 1.5px solid
+    padding: .5rem 3.8rem
+    font-size: 1rem
+    margin-top: 1rem
+    color: #c5f465
 
-.mult-lines-green
-  position: absolute
-  left: 0
-  width: 14%
-
-.lines-white
-  position: absolute
-  right: 0
-  width: 14%
-
-.aboutus-section
-  background: $color1
-.aboutus
-  margin-right: auto
-  color: $color0
+.home-aboutus
   .btn
-    color: $color0
-    &:hover
-      color: $color1
-      background-color: white
+    color: $color1
+  .test-phones
+    position: absolute
+    margin-top: auto
+    margin-bottom: auto
+    top: 0
+    bottom: -144px
+    right: 0
+    width: 766px
+
+.home-aboutus, .home-project
+  width: 537px
+  h2
+    font-size: 1.8rem
+    line-height: 2.5rem
+  .btn
+    border: 1.5px solid
+    padding: .5rem 3.8rem
+    font-size: 1rem
+    margin-top: 1rem
 
 
-.paragraph-text
-  font-weight: 300
-.emphesis-text
-  font-style: italic
-.bold-text
-  font-weight: 400
-.title-text
-  font-weight: 500
+// ----------PROJECT PAGE-------------
+
+
+
+.project-page-branding
+  position: absolute
+  top: 750px
+  left: -12%
+  width: 105%
+
+.project-text
+  width: 53rem !important
+  b
+    color: $color2
 
 .image
   width: 100%
   display: block
   height: auto
 
-#projects
-  .col-lg-4, .col-md-6
-    padding-left: 0
-    padding-right: 0
-
 .project-box
   position: relative
   display: block
-  // margin-bottom: 2rem
-  // margin-top: 2rem
-  &.ml
-    margin-left: 1rem
-  &.mr
-    margin-right: 1rem
+  padding-top: 2rem
+  padding-bottom: 2rem
+  &.pl
+    padding-left: 1rem
+  &.pr
+    padding-right: 1rem
+
 .overlay
   position: absolute
   top: 0
@@ -240,52 +298,153 @@ header, section
   left: 0
   right: 0
   opacity: 0
-  transition: .5s ease
-  background-color: $color2
+  margin-top: 2rem
+  margin-bottom: 2rem
+  transition: .4s ease
+  background-color: white
   border: .5rem solid
-  border-color: $color2
+  border-color: white
   cursor: pointer
+
 .project-box:hover .overlay
-  opacity: .95
+  opacity: 1
+
 .text
-  color: white
-  position: absolute
-  top: 60%
-  left: 55%
+  color: $color2
+  position: relative
+  top: 50%
+  left: 50%
   width: 90%
+  height: 85%
   -webkit-transform: translate(-50%, -50%)
   -ms-transform: translate(-50%, -50%)
   transform: translate(-50%, -50%)
-  img
-    margin-top: 1.5rem
-    margin-bottom: 2rem
+  .arrow
+    position: absolute
+    bottom: 0
+    right: 0
+    img
+      width: 80px
 
+.project-title
+  position: absolute
+  bottom: 0
+  h1
+    margin-bottom: 0
+
+.square-box
+  .project-title h1
+      font-size: 3.5rem
+  .arrow img
+      width: 60px
 .alt
   .text
-    color: white
-  .overlay
-    border-color: $color1
-    background-color: $color1
+    color: $color1
+
+// -----------PORFOLIO PAGES---------------
+
+.return-project
+  letter-spacing: 0.2rem
+  font-weight: 500
+  display: grid
+  grid-auto-flow: column
+  align-items: center
+  &:hover
+    text-decoration: none
+    color: $color1
+  img
+    transform: rotate(180deg)
+    margin-right: 1rem
+
+.link-arrow
+  width: 16px
+  margin-left: 1rem
+
+header.portfolio-header
+  min-height: 650px
+  height: 93vh
+
+
+.portfolio-info
+  ul
+    list-style: none
+    padding: 0
+    line-height: 2rem
+    b
+      color: $color2
+      font-size: 1rem
+    li
+      font-weight: 300
+      font-size: 1.2rem
+  h1
+    position: relative
+    bottom: 0.8rem
+  p, a
+    font-size: 1.35rem
 
 .lines-paranaque
   position: absolute
   left: 0
   width: 90px
 
-.paranaque-title
+.portfolio-title
   position: relative
   bottom: 0.8rem
 
-.paranaque-img
-  width: 100%
+.portfolio-section
+  min-height: 700px
+  height: 100vh
+
+.portfolio-image, .portfolio-text
+  height: 100vh
+  overflow: hidden
+  display: grid
+  justify-content: center
+  align-content: center
+  img
+    width: 100vw
+
+.portfolio-text
+  h4
+    font-size: 2.7rem
+    line-height: 3.4rem
+    font-weight: 500
+    width: 1000px
+  b
+    color: #50AD55
+  &.black-bg
+    background-color: #5D5D5D
+    color: white
+
+.project-slide
+  background-color: $color2
+
+  display: grid
+  align-content: center
+  .carousel-inner
+    min-height: 640.3px
+
+.portfolio-link
+  font-weight: 300
+  color: $color2
+  display: flex
+  grid-auto-flow: column
+  align-items: center
+  width: fit-content
+  &:hover
+    color: $color1
+    text-decoration: none
+  .link-arrow
+    width: 20px
+
+
+
+// ----------------STUDIO PAGE----------------------
 
 .about-intro
   font-size: 2rem
   width: 500px
   line-height: 3rem
-
-.title-content.contact
-  margin-bottom: 0
 
 .about-list
   ul
@@ -298,6 +457,11 @@ header, section
     h5
       color: $color2
       padding-bottom: .5rem
+
+// ----------------CONTACT PAGE----------------------
+
+.title-content.contact
+  margin-bottom: 0
 
 .contact-form
   form
@@ -326,37 +490,27 @@ header, section
         -webkit-box-shadow: inset 0 0 2px $color5
     &::-webkit-scrollbar-thumb
       background-color: $color2
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  textarea:-webkit-autofill,
+  textarea:-webkit-autofill:hover,
+  textarea:-webkit-autofill:focus,
+  select:-webkit-autofill,
+  select:-webkit-autofill:hover,
+  select:-webkit-autofill:focus
+    -webkit-text-fill-color: $color2
 
 
-
-
-input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus,
-textarea:-webkit-autofill,
-textarea:-webkit-autofill:hover,
-textarea:-webkit-autofill:focus,
-select:-webkit-autofill,
-select:-webkit-autofill:hover,
-select:-webkit-autofill:focus
-  -webkit-text-fill-color: $color2
-
-
-.link
-  font-weight: 300
-  color: $color1
-  &:hover
-    font-weight: 400
-    color: $color1
-    text-decoration: none
+// -----------MICS-------------------
 
 .btn
-  border: 2px solid
-  padding: .5rem 4.5rem
+  border: 1.5px solid
+  padding: .5rem 3.8rem
   border-radius: 42px
-  font-size: 1.1rem
+  font-size: 1rem
   font-weight: 500
-  margin-top: 2rem
+  margin-top: 1rem
   letter-spacing: 0.1rem
   &:focus
     outline: none
@@ -369,37 +523,41 @@ select:-webkit-autofill:focus
   left: 44%
   top: -74px
 
+.fadeIn-animation
+  -webkit-animation: fadein 2s /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 2s /* Firefox < 16 */
+  -ms-animation: fadein 2s /* Internet Explorer */
+  -o-animation: fadein 2s /* Opera < 12.1 */
+  animation: fadein 2s
+
+
 @keyframes fadein
     from
       opacity: 0
     to
       opacity: 1
-
-
+@keyframes fadeOut
+    100%
+      opacity: 0
+      visibility: hidden
 /* Firefox < 16 */
 @-moz-keyframes fadein
     from
       opacity: 0
     to
       opacity: 1
-
-
 /* Safari, Chrome and Opera > 12.1 */
 @-webkit-keyframes fadein
     from
       opacity: 0
     to
       opacity: 1
-
-
 /* Internet Explorer */
 @-ms-keyframes fadein
     from
       opacity: 0
     to
       opacity: 1
-
-
 /* Opera < 12.1 */
 @-o-keyframes fadein
     from
@@ -407,152 +565,145 @@ select:-webkit-autofill:focus
     to
       opacity: 1
 
-@media screen and (max-width: 1024px)
 
 
-  // header
-  //   height: auto
-  //   display: inline
-  //
+// ------------------------------------MEDIA QUIERY----------------------------------
+
+
+
+@media screen and (max-width: 1400px)
+  .home-project, .home-aboutus
+    width: 438px
+    h2
+      font-size: 1.5rem
+  .home-project
+    .test-magazine
+      width: 685px
+      top: 108px
+
+  .home-aboutus
+    .test-phones
+      width: 659px
+      bottom: -35px
+
+
+@media screen and (min-width: 1400px)
+  .home-project .test-magazine
+    width: 800px
+
+@media screen and (min-width:1600px)
+
   h1
-    font-size: 2.8rem
-  h2
-    font-size: 1.9rem
-    line-height: 3rem
-  .title-img
-    display: none
-  .navbar
-    .container
-      margin-top: 2rem
-  .navbar-brand
-    img
-      height: 32px
+    font-size: 5rem
 
   .title-content
     &.home
-      margin: 4rem 0 6rem
       h1
-        font-size: 3.2rem
-        padding: 3rem 0
-      .row
-        margin: -30px
-    h1
-      width: auto
-
-  .project-slide
-    .tatau-img
-      width: auto
-      height: 600px
-      margin: auto
-    .waitui-img
-      width: auto
-      height: 550px
-      padding-top: 2rem
-      margin: auto
-      filter: grayscale(1)
-    .spot-img
-      width: auto
-      height: 500px
-      padding-top: 5rem
-      margin: auto
-      filter: grayscale(1)
-    .carousel-inner
-      height: 600px
-      min-height: auto
-      max-height: none
-
-  .project-info, .aboutus
-    width: auto
-
-
-  #projects
-    .row
-      margin-right: -30px
-      margin-left: -30px
-  .project-box
-    // margin-bottom: 2rem
-    // margin-top: 0
-    &.ml
-      margin-left: 0
-    &.mr
-      margin-right: 0
-
-  .project-box:hover .overlay
-    opacity: 0
-
-  .mult-lines-green, .lines-white
-    width: 75px
-
-  // .scroll-icon
-  //   display: none
-
-  .t-project
-    min-height: 33rem
-    h1
-      margin-bottom: 1.2rem
-    h4
-      line-height: 2rem
-
-  .studio
-    .studio-info.row
-      margin-left: -30px
-      padding-right: -30px
-    .col-lg-6
-      padding-bottom: 4rem
-    ul
-      padding-inline-start: 0
-
-  #carouselParanaque .carousel-inner
-    min-height: auto
-
-  .contact
-    .row
-      margin-left: -30px
-      margin-right: -30px
-    .col-lg-6
-      padding-bottom: 4rem
-  .contact-form
-    bottom: 0
-
-
-
-// @media screen and (min-width: 1400px)
-//   .container
-//     max-width: 1300px
-//
-@media screen and (min-width:1600px)
-
-  .title-content
-    h1
-      width: 60rem
-      font-size: 5rem
+        width: 60rem
+        font-size: 5rem
   .title-img
     width: 139%
     right: -202px
     bottom: -145px
 
-  .project-slide
-    .tatau-img, .waitui-img, .spot-img
-      height: 760px
-//
-//   .project-slide .carousel-inner
-//     min-height: 800px
-//     max-height: inherit
-//
-//   .t-project
-//     min-height: 37rem
+  .home-project
+    width: 590px
+    img
+    .test-magazine
+      width: 966px
+
+  .home-aboutus
+    width: 655px
+    .test-phones
+      width: 840px
+      bottom: -100px
+    .paragraph-text
+      line-height: 3.1rem
+
+  .home-project, .home-aboutus
+    h2
+      font-size: 2.2rem
+      line-height: 2.9rem
+    .btn
+      border: 1.5px solid
+      padding: .5rem 3.8rem
+      font-size: 1rem
+      margin-top: 1rem
+
+  .learnMore-section
+    h1
+      width: 60rem
+
+
+@media screen and (min-width:1800px)
+
+  .home-project
+    width: 667px
+
+@media (max-width: 1024px)
+  header, section,
+    height: 50vh
+    min-height: 650px
+
+  .title-content.home, .learnMore-section
+    h1
+      font-size: 3.5rem
+      width: 42rem
+
+  .hideme
+    opacity: 1
+
+  .home-project .test-magazine
+    width: 496px
+    top: 56px
+
+
+  .home-aboutus .test-phones
+    width: 493px
+
+@media screen and (max-width: 1200px)
+
+  .navbar
+    position: absolute
+    width: 100%
+    padding-left: 15px
+    padding-right: 15px
+
+  .navbar-toggler
+    padding: 0
+  button:focus
+    outline: none
+
+  .navbar-nav .nav-link
+    font-size: 1.2rem
+
+  .title-content, .title-content.home
+    height: 100%
+  .title-content.home h1
+    margin-top: 7rem
+
+  .nav-item, .navbar-alt-animation .nav-item
+    text-align: right
+    padding-left: 0
+    animation-duration: 1s
+    &:nth-of-type(1)
+      animation-delay: 0s
+    &:nth-of-type(2)
+      animation-delay: .25s
+    &:nth-of-type(3)
+      animation-delay: .5s
+    &:nth-of-type(4)
+      animation-delay: .75s
+
+@media screen and (max-width: 1400px)
+  .home-project .test-magazine
+    width: 510px
+  .home-aboutus .test-phones
+    width: 506px
+
 
 
 // ------------------------------------BOOTSTRAP CONTAINER MODIFICATIONS----------------------------------
-
-
-
-
-
-
-
-
-
 
 
 @media (min-width: 576px)
@@ -569,7 +720,51 @@ select:-webkit-autofill:focus
 
 @media (min-width: 992px)
   .container
-    max-width: 874px
+    max-width: 971px
+
+@media (max-width: 1024px)
+  .container
+    max-width: 900px
+
+@media (max-width: 1200px)
+  #nav-wrapper
+    display: inline-block
+    border-radius: 500px
+    position: relative
+    padding: 10px
+    margin: 2px
+  .circle
+    width: 36px
+    height: 24px
+    position: relative
+    text-align: left
+  .line
+    position: absolute
+    height: 4px
+    width: 100%
+    background-color: $color1
+    border-radius: 2px
+    transition: all cubic-bezier(0.26, 0.1, 0.27, 1.55) 0.35s
+  .top
+    top: -1%
+  .middle
+    top: 50%
+  .bottom
+    top: 101%
+  .nav-icon.close .top
+    transform: rotate(45deg)
+    top: 48%
+  .nav-icon.close .middle, .nav-icon.close .bottom
+    transform: rotate(-45deg)
+    top: 48%
+
+  .navbar-toggler-icon
+    width: 3rem
+    height: 3rem
+
+  .navbar-brand img
+    height: 46px
+
 
 @media (min-width: 1200px)
   .container

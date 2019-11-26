@@ -10,12 +10,19 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <!-- CUSTOM STYLESHEET -->
     <link rel="stylesheet" href="css/styles.css">
+    <!-- ANIMATE.CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" integrity="sha256-PHcOkPmOshsMBC+vtJdVr5Mwb7r0LkSVJPlPrp/IMpU=" crossorigin="anonymous" />
     <!-- FONT AWESOME -->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500|Muli:300,400,500&display=swap" rel="stylesheet">
   </head>
+
   <body>
 
-    <nav class=" navbar navbar-expand-lg ">
+    <div class="loader ">
+      <img src="img/branding/graphic-2.png" class="animated infinite flipInY slow"alt="Loading...">
+    </div>
+<header class="">
+    <nav class=" navbar navbar-expand-xl ">
       <div class="container">
       <a class="navbar-brand" href="#">
         <img src="img/branding/logo-blue.png" height="30" alt="">
@@ -24,7 +31,7 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav ml-auto ">
+    <ul class="navbar-nav ml-auto navbar-alt-animation">
       <li class="nav-item ">
         <a class="nav-link" href="index.html">home</a>
       </li>
@@ -41,19 +48,39 @@
   </div>
   </div>
 </nav>
-<section id="projects">
+
+
+<div class="title-content project-page">
+  <div class=" container title-placement">
+        <h1 class="font-light project-text">
+          Okay Okay, enough chit chat. Let us <b>show off</b> our skills a little bit
+        </h1>
+  </div>
+</div>
+
+
+
+</header>
+<div class="projects">
+  <img src="img/branding/Projects Page Graphics.png" class="project-page-branding" alt="">
+  <div class="container">
     <div class="row">
-
-
-      <div class="col-lg-4 col-md-6 ">
+      <div class="col-12 ">
         <div class="project-box ">
-          <img src="img/PROJECTS/Paranaque.jpg" class="image " alt="">
-          <a href="paranaque.html">
+          <img src="img/MOCKUPS/19.Tatau.jpg" class="image " alt="">
+          <a href="tatau.html">
           <div class="overlay">
           <div class="text">
-            <h1>Parañaque <br>City Website</h1>
-            <img src="img/branding/line-red.png" width="140" alt="">
-            <h4>ui / ux design<br>web development</h4>
+            <div class="project-description">
+            <h4>editorial design</h4>
+            </div>
+            <div class="project-title">
+            <h1>Tatau <br>Magazine</h1>
+            </div>
+            <div class="arrow">
+              <img src="img/branding/arrow-blue.png" alt="">
+            </div>
+
           </div>
           </div>
           </a>
@@ -61,112 +88,167 @@
         </div>
       </div>
 
-      <div class="col-lg-4 col-md-6 ">
-        <div class="project-box  alt">
+      <div class="col-6 ">
+        <div class="project-box  pr alt">
           <img src="img/PROJECTS/Waitui.jpg" class="image " alt="">
           <a href="waitui.html">
           <div class="overlay">
-          <div class="text">
-            <h1>Waitui co. <br> Brand Identity</h1>
-            <img src="img/branding/line-blue.png" width="140" alt="">
-            <h4>logo & branding<br>retail design</h4>
+          <div class="text square-box">
+            <div class="project-description">
+              <h4>logo & brand identity</h4>
+            </div>
+            <div class="project-title ">
+            <h1>Waitui co.</h1>
+            </div>
+            <div class="arrow">
+              <img src="img/branding/arrow-red.png" alt="">
+            </div>
           </div>
           </div>
         </a>
         </div>
       </div>
 
-      <div class="col-lg-4 col-md-6">
-        <div class="project-box  ">
-        <img src="img/PROJECTS/Tatau.jpg" class="image " alt="">
-        <a href="tatau.html">
-        <div class="overlay">
-        <div class="text">
-          <h1>Tatau <br>Magazine</h1>
-          <img src="img/branding/line-red.png" width="140" alt=""><br>
-          <h4>editorial design<br>print design</h4>
-        </div>
-        </div>
-      </a>
-        </div>
-      </div>
+    </div>
+    <div class="row">
 
-      <div class="col-lg-4 col-md-6">
-        <div class="project-box  alt">
+      <div class="col-6">
+        <div class="project-box  pr">
         <img src="img/PROJECTS/Jazz.jpg" class="image " alt="">
         <a href="tribes.html">
         <div class="overlay">
-        <div class="text">
-          <h1>Tribes of <br>New York</h1>
-          <img src="img/branding/line-blue.png" width="140" alt=""><br>
+        <div class="text square-box">
+          <div class="project-description">
           <h4>packaging design</h4>
+          </div>
+          <div class="project-title">
+          <h1>Tribes of <br>New York</h1>
+        </div>
+        <div class="arrow">
+          <img src="img/branding/arrow-blue.png" alt="">
+        </div>
+
         </div>
         </div>
       </a>
         </div>
       </div>
 
-      <div class="col-lg-4 col-md-6">
-        <div class="project-box ">
+      <div class="col-6">
+        <div class="project-box  pr alt">
         <img src="img/PROJECTS/Giffgaff.jpg" class="image " alt="">
         <a href="giffgaff.html">
         <div class="overlay">
-        <div class="text">
-          <h1>Imagine a <br> Reality</h1>
-          <img src="img/branding/line-red.png" width="140" alt=""><br>
-          <h4>brand activation campaign<br>advertising</h4>
+        <div class="text square-box">
+          <div class="project-description">
+          <h4>advertising campain<br>augmented reality</h4>
+          </div>
+          <div class="project-title">
+          <h1>Imagine a <br>Reality</h1>
+        </div>
+        <div class="arrow">
+          <img src="img/branding/arrow-red.png" alt="">
+        </div>
         </div>
         </div>
       </a>
         </div>
       </div>
 
-      <div class="col-lg-4 col-md-6">
-        <div class="project-box  alt">
+
+
+      <div class="col-12">
+        <div class="project-box ">
+        <img src="img/MOCKUPS/1.Paranaque.jpg" class="image " alt="">
+        <a href="paranaque.html">
+        <div class="overlay">
+        <div class="text ">
+          <div class="project-description">
+          <h4>web development<br>ui/ux design</h4>
+          </div>
+          <div class="project-title">
+          <h1>Paranaque<br>City</h1>
+        </div>
+        <div class="arrow">
+          <img src="img/branding/arrow-blue.png" alt="">
+        </div>
+        </div>
+        </div>
+        </div>
+      </a>
+        </div>
+      </div>
+    <div class="row">
+
+      <div class="col-6 offset-6">
+        <div class="project-box  pl alt">
         <img src="img/PROJECTS/Gourmet.jpg" class="image " alt="">
         <a href="gourmet.html">
         <div class="overlay">
-        <div class="text">
-          <h1>Gourmet <br> Goodies App</h1>
-          <img src="img/branding/line-blue.png" width="140" alt=""><br>
+        <div class="text square-box">
+          <div class="project-description">
           <h4>ui / ux design<br>app development</h4>
+          </div>
+          <div class="project-title">
+          <h1>Gourmet <br> Goodies App</h1>
         </div>
+        <div class="arrow">
+          <img src="img/branding/arrow-red.png" alt="">
         </div>
-      </a>
-        </div>
-      </div>
-
-      <div class="col-lg-4 col-md-6">
-        <div class="project-box  ">
-        <img src="img/PROJECTS/Connect.jpg" class="image " alt="">
-        <a href="connect.html">
-        <div class="overlay">
-        <div class="text">
-          <h1>Connect <br>Reading Brand</h1>
-          <img src="img/branding/line-red.png" width="140" alt=""><br>
-          <h4>logo & branding<br>web design & development</h4>
-        </div>
-        </div>
-      </a>
-        </div>
-      </div>
-
-      <div class="col-lg-4 col-md-6">
-        <div class="project-box alt">
-        <img src="img/PROJECTS/Spotlight.png" class="image " alt="">
-        <a href="spotlight.html">
-        <div class="overlay">
-        <div class="text">
-          <h1>Spotlight</h1>
-          <img src="img/branding/line-blue.png" width="140" alt=""><br>
-          <h4>ui / ux design</h4>
         </div>
         </div>
       </a>
         </div>
       </div>
     </div>
-</section>
+      <div class="row">
+
+
+      <div class="col-6">
+        <div class="project-box pr ">
+        <img src="img/PROJECTS/Connect.jpg" class="image " alt="">
+        <a href="connect.html">
+        <div class="overlay">
+        <div class="text square-box">
+          <div class="project-description">
+          <h4>logo & branding<br>web design & development</h4>
+          </div>
+          <div class="project-title">
+          <h1>Connect <br>Reading Brand</h1>
+        </div>
+        <div class="arrow">
+          <img src="img/branding/arrow-blue.png" alt="">
+        </div>
+        </div>
+        </div>
+      </a>
+        </div>
+      </div>
+
+      <div class="col-6">
+        <div class="project-box pl alt">
+        <img src="img/PROJECTS/Spotlight.png" class="image " alt="">
+        <a href="spotlight.html">
+        <div class="overlay">
+        <div class="text square-box">
+          <div class="project-description">
+          <h4>ui / ux design</h4>
+          </div>
+          <div class="project-title">
+          <h1>Spotlight</h1>
+        </div>
+        <div class="arrow">
+          <img src="img/branding/arrow-red.png" alt="">
+        </div>
+        </div>
+        </div>
+      </a>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
 
 <footer>
   <div class="container">
@@ -183,8 +265,14 @@
     <!-- BOOTSTRAP minified JavaScript -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+
     <!-- Bootstrap core JavaScript -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
+
+    <script src="js/index.js" charset="utf-8"></script>
+
+
   </body>
 
 </html>
