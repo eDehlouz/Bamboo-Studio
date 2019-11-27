@@ -1,87 +1,109 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bamboo Studio</title>
 
-    <!-- BOOTSTRAP CDN -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <!-- CUSTOM STYLESHEET -->
-    <link rel="stylesheet" href="css/styles.css">
-    <!-- ANIMATE.CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" integrity="sha256-PHcOkPmOshsMBC+vtJdVr5Mwb7r0LkSVJPlPrp/IMpU=" crossorigin="anonymous" />
-    <!-- FONT AWESOME -->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500|Muli:300,400,500&display=swap" rel="stylesheet">
-  </head>
-  <body>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bamboo Studio</title>
+  <meta name="description" content="Hello! We are bamboo, a tight knit design and development group based in Manila" />
+  <meta name="robots" content="index, nofollow">
+  <meta name="keywords" content="Bamboo Creative Studio,Bamboo,Bamboo Creative,Studio,Graphic Design,Website,Development,Marketing,Manila,Brand Identity,Logo,Logo Design,Design,Visual">
 
-    <div class="loader ">
-      <img src="img/branding/graphic-2.png" class="animated infinite flipInY slow"alt="Loading...">
-    </div>
 
-    <nav class=" navbar navbar-expand-xl ">
+  <!-- BOOTSTRAP CDN -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <!-- ANIMATE.CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" integrity="sha256-PHcOkPmOshsMBC+vtJdVr5Mwb7r0LkSVJPlPrp/IMpU=" crossorigin="anonymous" />
+  <!-- CUSTOM STYLESHEET -->
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- FONT AWESOME -->
+<link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500|Muli:300,400,500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="loader ">
+    <img src="img/branding/graphic-2.png" class="animated infinite flipInY slow" alt="Loading...">
+  </div>
+
+  <header>
+    <nav class=" navbar navbar-expand-xl  ">
       <div class="container">
-      <a class="navbar-brand" href="#">
-        <img src="img/branding/logo-blue.png" height="30" alt="">
-      </a>
-  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav ml-auto navbar-alt-animation contact">
-      <li class="nav-item ">
-        <a class="nav-link" href="index.html">home</a>
-      </li>
-      <li class="nav-item ">
-        <a class="nav-link" href="project.html">projects</a>
-      </li>
-      <li class="nav-item ">
-        <a class="nav-link" href="studio.html">studio</a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="contact.html">contact<span class="sr-only">(current)</span></a>
-      </li>
-    </ul>
-  </div>
-  </div>
-</nav>
-<header class="animated fadeIn slower">
-<div class="title-content contact">
-  <img src="img/branding/line-blue-crop.png" class="lines-paranaque"alt="">
-  <div class=" container">
-    <div class="row">
-      <div class="col-lg-6">
-        <h1 class="portfolio-title"><b>get in touch</b></h1>
-        <h3 class="font-light about-intro">we at bamboo would love to hear from you about possible future collaborations</h3>
-      </div>
-      <div class="col-lg-6">
-        <div class="contact-form">
-          <form action="POST" data-netlify="true">
-            <input type="text" name="name" placeholder="Name" required>
-            <input type="mail" name="email" placeholder="Email Address" required>
-            <input type="text" name="subject" placeholder="Subject" required>
-            <textarea name="message" placeholder="Message" rows="8" cols="80" required></textarea>
-            <button type="submit" class="btn" name="submit">SEND</button>
-          </form>
+        <a class="navbar-brand " href="#">
+          <img src="img/branding/logo-blue.png" alt="">
+        </a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <!-- <span class="navbar-toggler-icon"></span> -->
+          <div id="nav-wrapper" class="nav-toggler-icon">
+            <div class="circle nav-icon">
+              <span class="line top"></span>
+              <span class="line middle"></span>
+              <span class="line bottom"></span>
+            </div>
+          </div>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto navbar-alt-animation contact">
+            <li class="nav-item    ">
+              <a class="nav-link" href="#">home</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link" href="project.html">projects</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link" href="studio.html">studio</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="contact.html">contact <span class="sr-only">(current)</span></a>
+            </li>
+          </ul>
         </div>
       </div>
+    </nav>
+    <div class="title-content home">
+      <div class=" container title-placement">
+        <div class="row">
+          <div class="col-lg-8">
+            <h1 class="font-light animated fadeIn delay-1s slow">
+              Hey, we're just<br>one <span class="contact-type-anim"></span>away.
+            </h1>
+          </div>
+          <div class="col-lg-4">
+            <ul class="animated fadeIn delay-2s">
+              <li><b>EMAIL</b></li>
+              <li>info@bamboocreativestudio.com</li>
+              <br>
+              <li><b>PHONE</b></li>
+              <li>+63.995.533.0190</li>
+              <br>
+              <li><b>SOCIAL MEDIA</b></li>
+              <li>instagram</li>
+              <li>facebook</li>
+              <li>behance</li>
+              <li>dribble</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <img class="contact-branding animated fadeIn delay-2s slow" src="img/branding/CONTACTS GRAPHICS.png" alt="">
     </div>
-  </div>
-  </div>
-</header>
+
+  </header>
 
 
 
 
-    <!-- BOOTSTRAP minified JavaScript -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <!-- Bootstrap core JavaScript -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
 
-    <script src="js/index.js" charset="utf-8"></script>
-  </body>
+
+  <!-- BOOTSTRAP minified JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="js/typed.min.js" charset="utf-8"></script>
+  <script src="js/index.js" charset="utf-8"></script>
+</body>
 
 </html>
